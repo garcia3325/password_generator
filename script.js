@@ -7,44 +7,21 @@ var lowerCase = new Array ("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"
 var  numbers = new Array (0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 var specialCharacters = new Array ( "+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "^","~", "*", "?", ":" );
 
-// user interaction prompts for password criteria
-
-function getPrompts () {
-  ChoiceArr =[];
-  characterLength = parseInt(window.prompt("Enter a number between 8 and 128 to set your password's length"));
-  
-  if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
-    alert ("Character length is invalid. Please try again.");
-    return false;
-  }
-    if (window.confirm("Would you like to use lower case letters?")) {
-      ChoiceArr = ChoiceArr.concat(lowerCase);
-    }
-    if (window.confirm("Would you like to use upper case letters?")) {
-      ChoiceArr = ChoiceArr.concat(upperCase);
-    }
-    if (window.confirm("Would you like to use numbers?")) {
-      ChoiceArr = ChoiceArr.concat(numbers);
-    }
-    if (window.confirm("Would you like to use special characters?")) {
-      ChoiceArr = ChoiceArr.concat(specialCharacters);
-    }
-    return true;
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-
-
-//generate password function
-function generatePassword () {
-  return "Generated Password goes here!"
-  console.log ("it worked")
-}
-  
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-}
+
+// Write password to the #password input
+function writePassword() {
+  var userInput = getPrompts ();
+  var passwordText = document.querySelector("#password");   
+    
+  if (userInput) {
+      var password = generatePassword(); 
+       passwordText.value = password;
+    } else {
+      passwordTest.value ="";
+    }
+  }
