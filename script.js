@@ -25,3 +25,12 @@ function writePassword() {
       passwordTest.value ="";
     }
   }
+//generate password function
+function generatePassword () {
+  var password = "";
+  for (var i=0; i<characterLength; i++) {
+    var randomIndex = Math.floor(Math.random() * ChoiceArr.length);
+    password = password + ChoiceArr[randomIndex];
+  }  
+  return password;
+}
