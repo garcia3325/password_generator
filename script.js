@@ -34,3 +34,28 @@ function generatePassword () {
   }  
   return password;
 }
+// user interaction prompts for password criteria
+function getPrompts () {
+  
+  ChoiceArr =[];
+
+  characterLength = parseInt(window.prompt("Enter a number between 8 and 128 to set your password's length"));
+  
+  if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
+    alert ("Character length is invalid. Please try again.");
+    return false;
+  }
+    if (window.confirm("Would you like to use lower case letters?")) {
+      ChoiceArr = ChoiceArr.concat(lowerCase);
+    }
+    if (window.confirm("Would you like to use upper case letters?")) {
+      ChoiceArr = ChoiceArr.concat(upperCase);
+    }
+    if (window.confirm("Would you like to use numbers?")) {
+      ChoiceArr = ChoiceArr.concat(numbers);
+    }
+    if (window.confirm("Would you like to use special characters?")) {
+      ChoiceArr = ChoiceArr.concat(specialCharacters);
+    }
+    return true;
+    }
