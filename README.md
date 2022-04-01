@@ -13,6 +13,5 @@ o	Uppercase characters
 
 The application validates user input and ensure that at least one character type is selected. Once all prompts are selected the password is displayed in the page
 
-![First Screenshot] (assets/Screen Shot 2022-03-31 at 4.37.17 PM.png)
-![Second Screenshot] assets/Screen Shot 2022-03-31 at 4.37.30 PM.png
-![Third Screenshot] (assets/Screen Shot 2022-03-31 at 4.37.43 PM.png)
+!assets/Screen Shot 2022-03-31 at 4.37.30 PM.png
+
