@@ -28,7 +28,7 @@ The user will be prompted via a browser alert to choose from the password criter
 
 •	JavaScript
 
-**Aplication Link:** https://garcia3325.github.io/password_generator/
+**Application Link:** https://garcia3325.github.io/password_generator/
 
 **Images**
 
